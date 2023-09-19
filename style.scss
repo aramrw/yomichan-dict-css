@@ -1,0 +1,301 @@
+/* remove misc dict classifications/codepoints/stats */
+.kanji-glyph-data > tbody > tr:nth-child(n + 3) {
+  display: none;
+}
+
+/* remove stroke diagram, freq, header for next entries */
+div.entry[data-type='kanji']:nth-child(n + 2) .kanji-glyph-container,
+div.entry[data-type='kanji']:nth-child(n + 2) [data-section-type='frequencies'],
+div.entry[data-type='kanji']:nth-child(n + 2) table.kanji-glyph-data > tbody > tr:first-child {
+  display: none;
+}
+
+/* remove 'No data found' */
+.kanji-info-table-item-value-empty {
+  display: none;
+}
+
+/* reduce extra padding */
+.kanji-glyph-data,
+div.entry[data-type='kanji'],
+div.entry[data-type='kanji']:nth-child(n + 2) .kanji-glyph-data > tbody > tr > *,
+.kanji-glyph-data dl.kanji-readings-japanese,
+div.entry[data-type='kanji']:nth-child(n + 2)
+  .kanji-glyph-data
+  dl.kanji-readings-chinese[data-count='0'] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0em;
+  margin-top: 0 !important;
+}
+/* remove horizontal lines */
+.entry + .entry[data-type='kanji'],
+div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > tr > * {
+  border-top: none !important;
+}
+/* change decimal list */
+.kanji-gloss-list {
+  list-style-type: circle;
+}
+
+/* Darius Dictionary Colorizer
+ * The latest version can be found at
+ * https://github.com/themoeway/yomichan-dict-css
+ */
+
+:root {
+  /* Change this opacity to 0% if you don't want backgrounds to change.
+   * Or increase it if you want them to change more. 
+   */
+  --dict-color-opacity: 100%;
+  --dict-color: var(--tag-dictionary-background-color);
+  --dict-bg-opacity: 0;
+}
+
+.definition-item {
+  background-color: color-mix(
+    in srgb,
+    var(--dict-color) calc(var(--dict-bg-opacity) * var(--dict-color-opacity)),
+    var(--background-color)
+  );
+  --tag-dictionary-background-color: var(--dict-color);
+}
+
+/* Japanese Dicts */
+
+.definition-item[data-dictionary^="旺文社国語辞典"] {
+  --dict-color: rgb(187, 255, 255);
+  --dict-bg-opacity: 0.06;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary^="明鏡国語辞典"] {
+  --dict-color: rgb(51, 51, 221);
+  --dict-bg-opacity: 0.03;
+}
+.definition-item[data-dictionary^="岩波国語辞"] {
+  --dict-color: rgb(51, 85, 51);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary*="新明解"] {
+  --dict-color: rgb(255, 0, 0);
+  --dict-bg-opacity: 0.025;
+}
+.definition-item[data-dictionary^="大辞林"] {
+  --dict-color: #FF5151;
+  background-color: rgba(245, 245, 245, 0.05);
+  --dict-bg-opacity: 0.04;
+  --tag-text-color: black;
+
+}
+.definition-item[data-dictionary="デジタル大辞泉"] {
+  --dict-color: #DD7FFF;
+  --dict-bg-opacity: 0.04;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary="精選版　日本国語大辞典"] {
+  --dict-color: rgb(238, 238, 204);
+  --dict-bg-opacity: 0.05;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary="ハイブリッド新辞林"] {
+  --dict-color: rgb(221, 221, 238);
+  --dict-bg-opacity: 0.15;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary^="広辞苑"] {
+  --dict-color: rgb(51, 51, 51);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="四字熟語辞典オンライン"],
+.definition-item[data-dictionary="故事・ことわざ・慣用句オンライン"],
+.definition-item[data-dictionary="国語辞典オンライン"] {
+  --dict-color: rgb(255, 227, 124);
+  --dict-bg-opacity: 0.05;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary="実用日本語表現辞典"] {
+  --dict-color: rgb(99, 108, 141);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary^="三省堂国語辞典"] {
+  --dict-color: rgb(229, 107, 57);
+  --dict-bg-opacity: 0.03;
+}
+.definition-item[data-dictionary^="JMdict"],
+.definition-item[data-dictionary^="JMDict"],
+.definition-item[data-dictionary^="JMnedict"] {
+  --dict-color: #60B0FF;
+  --dict-bg-opacity: 0.05;
+  --tag-text-color: black;
+  --dict-bg-opacity: 0.02;
+}
+.definition-item[data-dictionary="NEW斎藤和英大辞典"] {
+  --dict-color: rgb(244, 225, 254);
+  --dict-bg-opacity: 0.15;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary="新和英"] {
+  --dict-color: rgb(21, 70, 51);
+  --dict-bg-opacity: 0.03;
+}
+.definition-item[data-dictionary^="Pixiv"] {
+  --dict-color: rgb(0, 151, 250);
+  --dict-bg-opacity: 0.03;
+}
+.definition-item[data-dictionary="漢字源"] {
+  --dict-color: rgb(201, 149, 93);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="日本語俗語辞書"] {
+  --dict-color: rgb(176, 4, 157);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="weblio古語辞典"] {
+  --dict-color: rgb(193, 123, 148);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="語源由来辞典"] {
+  --dict-color: rgb(206, 169, 47);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="学研 四字熟語辞典"] {
+  --dict-color: rgb(180, 192, 152);
+  --dict-bg-opacity: 0.08;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary="故事ことわざの辞典"] {
+  --dict-color: rgb(117, 87, 85);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary^="日本語文法辞典"] {
+  --dict-color: rgb(23, 59, 173);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="絵でわかる日本語"] {
+  --dict-color: rgb(207, 76, 110);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="JLPT文法解説まとめ"] {
+  --dict-color: rgb(244, 66, 54);
+  --dict-bg-opacity: 0.05;
+}
+.definition-item[data-dictionary="どんなときどう使う 日本語表現文型辞典"] {
+  --dict-color: rgb(126, 168, 232);
+  --dict-bg-opacity: 0.08;
+}
+.definition-item[data-dictionary="毎日のんびり日本語教師"] {
+  --dict-color: rgb(255, 216, 228);
+  --dict-bg-opacity: 0.12;
+  --tag-text-color: black;
+}
+.definition-item[data-dictionary^="新選国語辞典"] {
+  --dict-color: #0073c4;
+  --dict-bg-opacity: 0.03;
+}
+/* goo.ne.jp */
+.definition-item[data-dictionary^="使い方の分かる 類語例解辞典"],
+.definition-item[data-dictionary^="全国方言辞典"] {
+  --dict-color: #9c4836;
+  --dict-bg-opacity: 0.03;
+}
+
+
+/* Frequency Dicts */
+
+/* Japanese Frequency */
+.frequency-group-item[data-details="Anime & J-drama"] {
+  --tag-frequency-background-color: #5BE846;
+  --tag-text-color: black;
+}
+.frequency-group-item[data-details="JPDB"] {
+   --tag-frequency-background-color: #ffea00;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="JPDB Kanji Freq"] {
+   --tag-frequency-background-color: #FFF95A;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="Novels"] {
+   --tag-frequency-background-color: #46E8AD;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="VN Freq"] {
+   --tag-frequency-background-color: #E85DD8;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="Narou Freq"] {
+   --tag-frequency-background-color: #60ECFF;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details^="BCCWJ"] {
+   --tag-frequency-background-color: #FFD294;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="CC100"] {
+   --tag-frequency-background-color: #6F7BFF;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details^="Innocent"] {
+   --tag-frequency-background-color: #9F80FF;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details^="jpDicts"] {
+   --tag-frequency-background-color: #b8bedd;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="Conversation Corpus"] {
+   --tag-frequency-background-color: #FF6F95;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="Netflix"] {
+   --tag-frequency-background-color: #94FFF4;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="青空文庫熟語"] {
+   --tag-frequency-background-color: #FA50CA;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="青空文庫漢字"] {
+   --tag-frequency-background-color: #FA50CA;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="Youtube"] {
+   --tag-frequency-background-color: #E84653;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="国語辞典"] {
+   --tag-frequency-background-color: #94FFF4;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="Wikipedia"] {
+   --tag-frequency-background-color: #E87446;
+   --tag-text-color: black;
+}
+.frequency-group-item[data-details="Wikipedia Kanji"] {
+   --tag-frequency-background-color: #FFCA60;
+   --tag-text-color: black;
+}
+
+/* Miscellanious Tags */
+
+.tag[data-category=pronunciation-dictionary] {
+   --tag-pronunciation-dictionary-background-color: #FFCA60;
+   --tag-text-color: black;
+}
+
+.tag[data-category=frequent] {
+   --tag-frequent-background-color: #2667ff;
+   --tag-text-color: white;
+}
+.tag[data-category=popular] {
+    --tag-popular-background-color: #1e96fc;
+    --tag-text-color: white;
+}
+.tag[data-category=partOfSpeech] {
+    --tag-text-color: whitesmoke;
+}
+.entry-current-indicator {
+    background-color: #FFD21F;
+}
+::-webkit-scrollbar-thumb {
+}
