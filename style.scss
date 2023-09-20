@@ -208,11 +208,11 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
   --tag-text-color: black;
 }
 .frequency-group-item[data-details="JPDB"] {
-   --tag-frequency-background-color: #ffea00;
+   --tag-frequency-background-color: #FFD739;
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="JPDB Kanji Freq"] {
-   --tag-frequency-background-color: #FFF95A;
+   --tag-frequency-background-color: #FFD739;
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="Novels"] {
@@ -228,7 +228,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
    --tag-text-color: black;
 }
 .frequency-group-item[data-details^="BCCWJ"] {
-   --tag-frequency-background-color: #FFD294;
+   --tag-frequency-background-color: #65A7FF;
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="CC100"] {
@@ -236,7 +236,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
    --tag-text-color: black;
 }
 .frequency-group-item[data-details^="Innocent"] {
-   --tag-frequency-background-color: #9F80FF;
+   --tag-frequency-background-color: #F97678;
    --tag-text-color: black;
 }
 .frequency-group-item[data-details^="jpDicts"] {
@@ -252,11 +252,11 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="青空文庫熟語"] {
-   --tag-frequency-background-color: #FA50CA;
+   --tag-frequency-background-color: #FF6A6A;
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="青空文庫漢字"] {
-   --tag-frequency-background-color: #FA50CA;
+   --tag-frequency-background-color: #FF6A6A;
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="Youtube"] {
@@ -268,11 +268,11 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="Wikipedia"] {
-   --tag-frequency-background-color: #E87446;
+   --tag-frequency-background-color: #FF9361;
    --tag-text-color: black;
 }
 .frequency-group-item[data-details="Wikipedia Kanji"] {
-   --tag-frequency-background-color: #FFCA60;
+   --tag-frequency-background-color: #FF9361;
    --tag-text-color: black;
 }
 
@@ -284,7 +284,7 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 }
 
 .tag[data-category=frequent] {
-   --tag-frequent-background-color: #2667ff;
+   --tag-frequent-background-color: #2982FF;
    --tag-text-color: white;
 }
 .tag[data-category=popular] {
@@ -297,5 +297,18 @@ div#dictionary-entries > div.entry:nth-child(n + 2) .kanji-glyph-data > tbody > 
 .entry-current-indicator {
     background-color: #FFD21F;
 }
-::-webkit-scrollbar-thumb {
+.tag[data-details="KANJIDIC (English)"] {
+    --tag-dictionary-background-color: #3388FF;
+    --tag-text-color: whitesmoke;
+}
+.tag[data-details="JPDB Kanji"] {
+    --tag-dictionary-background-color: #FFD739;
+    --tag-text-color: black;
+}
+.tag[data-details="mozc Kanji Variants"] {
+    --tag-dictionary-background-color: #F97678;
+    --tag-text-color: black;
+}
+.kanji-glyph.source-text {
+background-color: rgb(245, 245, 245, 0.009);
 }
