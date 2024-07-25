@@ -1,7 +1,8 @@
 ## My Yomichan Setup
-👇 Full list of included dictionaries on releases page 
+👇 Full list of included dictionaries here (Yomitan Only)
 
-### [Download Dictionaries](https://github.com/aramrw/yomichan-dict-css/releases/tag/v1.0.0)
+### [Download Dictionaries](https://drive.google.com/file/d/19hLNyoolPaA3JlTw_cTbXHV6Irogd-Bf/view?usp=drive_link)
+
 
 
 ## CSS Appearence.
