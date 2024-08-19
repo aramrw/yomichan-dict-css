@@ -18,8 +18,7 @@
   font-size: 16px;
 }
 
-/** background color */
-
+/** word in sentence background color with outline */
 span[style*="background-color: rgb(19, 19, 19)"] {
   padding: 3px 5px;
   margin: 0px 2px;
@@ -59,7 +58,6 @@ body.nightMode {
   color: white;
   background: var(--background);
 }
-
 
 img {
   width: auto;
@@ -305,7 +303,6 @@ Option 3.) NSFW images display on desktop, but are blurred on mobile (and can be
 
 Option 1 is enabled by default, while options 2 and 3 are commented out. To use another option you need to uncomment the option you want (as well as comment out or delete option 1).
 
-
 /* OPTION 1 */
 .mobile .NSFW img:first-of-type {
   display: none;
@@ -314,7 +311,6 @@ Option 1 is enabled by default, while options 2 and 3 are commented out. To use 
 .mobile .NSFW .audio {
   position: static;
 }
-
 
 /* OPTION 2
 .NSFW img {
