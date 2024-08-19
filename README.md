@@ -7,6 +7,7 @@
 <img src="https://github.com/user-attachments/assets/e3c5cad0-dd9d-4039-9241-0ab1fdce6236" width="500px" />
 
 ### Anki Plugins
+[Download Card Template](https://github.com/aramrw/yomichan-dict-css/releases/download/1.1.0/anki-note.apkg)
 **[Anki Connect](https://ankiweb.net/shared/info/2055492159)** |
 **[AJT Japanese](https://ankiweb.net/shared/info/1344485230)** |
 **[Review Heatmap](https://ankiweb.net/shared/info/1771074083)** |
@@ -17,4 +18,3 @@
 [Quick Restart](https://ankiweb.net/shared/info/237169833) |
 [WebView Inspecter](https://ankiweb.net/shared/info/31746032) |
 
-### Backup Export Settings -> [exportsettings.json](https://github.com/aramrw/yomichan-dict-css/releases/download/v1.0.0/yomichan-settings-2023-09-19-08-41-59.json)
