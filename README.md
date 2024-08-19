@@ -1,4 +1,5 @@
 ## Yomitan
+> 酩酊
 <img src="https://github.com/user-attachments/assets/5ea1ab5f-a62b-4af9-b5ce-5770ddb5ae5b" width="500px" />
 
 **[Download Dictionaries](https://drive.google.com/file/d/19hLNyoolPaA3JlTw_cTbXHV6Irogd-Bf/view?usp=drive_link)** |
