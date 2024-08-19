@@ -1,0 +1,77 @@
+<div lang="ja" id="mainDiv">
+	<script>
+		qFade = 0; // appears immediately instead of fading in
+})
+	</script>
+
+	{{^picture}}
+	<style>
+		.audio {
+			display: block !important;
+		}
+	</style>
+	{{/picture}}
+
+	<div id="kanjiHover">
+		<div id="word">
+
+			<div id="reading">
+				{{reading}}
+			</div>
+
+			<div id="onlyWrd">
+				{{#wordDictionaryForm}}
+				{{edit:wordDictionaryForm}}
+			</div>
+			{{/wordDictionaryForm}}
+			{{^wordAudio}}
+			<span class="audio">{{sentenceAudio}}</span>
+			{{/wordAudio}}
+		</div>
+
+		<div id="picture" class="{{Tags}}">
+			{{#picture}}
+			{{#wordAudio}}
+			<span id="wordAudio" class="audio">{{wordAudio}}</span>
+			<span class="audio">{{sentenceAudio}}</span>
+			{{/wordAudio}}
+			{{picture}}
+			{{/picture}}
+			{{^picture}}
+			<div id="centeredAudio">
+				<span class="audio">{{wordAudio}}</span>
+				<span class="audio sentenceAudio">{{sentenceAudio}}</span>
+				{{/picture}}
+			</div>
+
+			<div id="sentence">
+				{{edit:sentence}}
+			</div>
+		</div>
+
+		<div id="definition">
+			{{definition}}
+		</div>
+	</div>
+</div>
+
+<script>
+	// if the sentence doesn't already contain [pitch: 
+	// or a japanese back parenthesis "）"
+	// automatically wraps all list items with kotu's [pitch: ] 
+	var lists = document.querySelectorAll("li");
+	for (const li of lists) {
+		if (!li.innerText.includes("pitch") && !li.innerText.includes("）")) {
+			li.innerText = `[pitch: ${li.innerText} ]`
+		}
+	}
+</script>
+
+<!-- KOTU_START_OF_BLOCK -->
+<style>
+    phrase{display:inline}phrase.active{background-color:#e9ecef}space{padding-left:6px;padding-right:6px}.visual-type-showPitchAccentDrops visual{display:inline!important}.visual-type-showPitchAccentDrops component{display:none}.visual-type-showPitchAccentDrops .page{line-height:1.75rem}marking.drop{border-top:solid #dc3545 1px;background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAADCAIAAADdv/LVAAAACXBIWXMAAAsTAAALEwEAmpwYAAAG0WlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDMgNzkuMTY0NTI3LCAyMDIwLzEwLzE1LTE3OjQ4OjMyICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdEV2dD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlRXZlbnQjIiB4bWxuczpwaG90b3Nob3A9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGhvdG9zaG9wLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjIuMSAoMjAyMDEyMTQuYi42NTkgZWIwYTNlNSkgIChNYWNpbnRvc2gpIiB4bXA6Q3JlYXRlRGF0ZT0iMjAyMS0wMS0yMVQxNjoxNzo1MC0wNTowMCIgeG1wOk1ldGFkYXRhRGF0ZT0iMjAyMS0wMS0yMVQxNjoxNzo1MC0wNTowMCIgeG1wOk1vZGlmeURhdGU9IjIwMjEtMDEtMjFUMTY6MTc6NTAtMDU6MDAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDk4YjM3MTQtMDM3NS00YmZmLThmMzAtYjAwZGUwYTJiOGU0IiB4bXBNTTpEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6YTMwNjIwMTktNjUxMC01MTQ4LTg5MTktYzVjYmNmZTU2NmY5IiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6MGNmZjFiOTUtZDdkMi00MTk0LTkyYTgtOGFjYmJkNWU2YWRkIiBwaG90b3Nob3A6Q29sb3JNb2RlPSIzIiBwaG90b3Nob3A6SUNDUHJvZmlsZT0ic1JHQiBJRUM2MTk2Ni0yLjEiIGRjOmZvcm1hdD0iaW1hZ2UvcG5nIj4gPHhtcE1NOkhpc3Rvcnk+IDxyZGY6U2VxPiA8cmRmOmxpIHN0RXZ0OmFjdGlvbj0iY3JlYXRlZCIgc3RFdnQ6aW5zdGFuY2VJRD0ieG1wLmlpZDowY2ZmMWI5NS1kN2QyLTQxOTQtOTJhOC04YWNiYmQ1ZTZhZGQiIHN0RXZ0OndoZW49IjIwMjEtMDEtMjFUMTY6MTc6NTAtMDU6MDAiIHN0RXZ0OnNvZnR3YXJlQWdlbnQ9IkFkb2JlIFBob3Rvc2hvcCAyMi4xICgyMDIwMTIxNC5iLjY1OSBlYjBhM2U1KSAgKE1hY2ludG9zaCkiLz4gPHJkZjpsaSBzdEV2dDphY3Rpb249InNhdmVkIiBzdEV2dDppbnN0YW5jZUlEPSJ4bXAuaWlkOjA5OGIzNzE0LTAzNzUtNGJmZi04ZjMwLWIwMGRlMGEyYjhlNCIgc3RFdnQ6d2hlbj0iMjAyMS0wMS0yMVQxNjoxNzo1MC0wNTowMCIgc3RFdnQ6c29mdHdhcmVBZ2VudD0iQWRvYmUgUGhvdG9zaG9wIDIyLjEgKDIwMjAxMjE0LmIuNjU5IGViMGEzZTUpICAoTWFjaW50b3NoKSIgc3RFdnQ6Y2hhbmdlZD0iLyIvPiA8L3JkZjpTZXE+IDwveG1wTU06SGlzdG9yeT4gPHBob3Rvc2hvcDpEb2N1bWVudEFuY2VzdG9ycz4gPHJkZjpCYWc+IDxyZGY6bGk+eG1wLmRpZDoxMjY2REQwODExRjkxMUU3Qjk5NjgwRkJBMjA4MEREMDwvcmRmOmxpPiA8L3JkZjpCYWc+IDwvcGhvdG9zaG9wOkRvY3VtZW50QW5jZXN0b3JzPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlpWfDYAAAAOSURBVAhbY7hj6sYAxQAZ7AQGgHSQSgAAAABJRU5ErkJggg==) no-repeat right 0;text-indent:0;padding-top:0;display:inline-block}marking.overline{border-top:solid #dc3545 1px;text-indent:0;padding-top:0;display:inline-block}silenced{display:inline-block;position:relative;margin:0 1px;padding:2px;border:dotted #222 1px;line-height:1;border-radius:50%;text-indent:0;box-sizing:border-box}silenced.wide{border-radius:12px}visual{display:none}.visual-type-showFrequency .underline{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:0.25rem}.visual-type-showFrequency .underline-veryCommon{text-decoration-color:#0dcaf0}.visual-type-showFrequency .underline-common{text-decoration-color:#20c997}.visual-type-showFrequency .underline-uncommon{text-decoration-color:#ffc107}.visual-type-showFrequency .underline-rare{text-decoration-color:#fd7e14}.visual-type-showFrequency .underline-veryRare{text-decoration-color:#dc3545}.visual-type-showFrequency .underline-unknown{text-decoration-color:#adb5bd}.visual-type-showPitchAccent .underline{text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:2px;text-underline-offset:0.25rem}.visual-type-showPitchAccent .underline-pitch-heiban{text-decoration-color:#5fbfff}.visual-type-showPitchAccent .underline-pitch-odaka{text-decoration-color:#ffde37}.visual-type-showPitchAccent .underline-pitch-nakadaka{text-decoration-color:#66ff4b}.visual-type-showPitchAccent .underline-pitch-kihuku{text-decoration-color:#66ff4b}.visual-type-showPitchAccent .underline-pitch-atamadaka{text-decoration-color:#fd4a4a}.ruby-type-none rt{display:none}.ruby-type-unknown .underline-veryRare rt{display:none}.ruby-type-unknown .underline-rare rt{display:none}.ruby-type-unknown .underline-uncommon rt{display:none}.ruby-type-unknown .underline-uncommon rt{display:none}.ruby-type-unknown .underline-common rt{display:none}.ruby-type-unknown .underline-common rt{display:none}.ruby-type-veryRare .underline-rare rt{display:none}.ruby-type-veryRare .underline-uncommon rt{display:none}.ruby-type-veryRare .underline-common rt{display:none}.ruby-type-veryRare .underline-veryCommon rt{display:none}.ruby-type-rare .underline-uncommon rt{display:none}.ruby-type-rare .underline-common rt{display:none}.ruby-type-rare .underline-veryCommon rt{display:none}.ruby-type-uncommon .underline-common rt{display:none}.ruby-type-uncommon .underline-veryCommon rt{display:none}.ruby-type-common .underline-veryCommon rt{display:none}component{line-height:2.5rem;font-size:1.5.5rem}component{background-color:transparent;border-radius:4px;padding-bottom:6px;padding-left:1px;padding-right:1px}component:hover{background-color:rgba(127,127,127,.17)}.visual-type-none component{padding-bottom:0}rt .underline{text-decoration:none!important;padding:0}rt { display: none; }
+</style>
+<script>
+    void 0===window.kotu&&(window.kotu={},kotu.smallHiragana="ぁぃぅぇぉゃゅょゎ",kotu.smallKatakana="ァィゥェォヵㇰヶㇱㇲㇳㇴㇵㇶㇷㇷ゚ㇸㇹㇺャュョㇻㇼㇽㇾㇿヮ",kotu.smallKana=kotu.smallHiragana+kotu.smallKatakana,kotu.parseHTML=(e=>{const t=document.createElement("div");return t.innerHTML=e,t.childNodes}),kotu.textFromHTML=(e=>{const t=document.createElement("span");return t.innerHTML=e,t.textContent||t.innerText}),kotu.removeYouon=(e=>e.split("").filter(e=>!kotu.smallKana.includes(e)).join("")),kotu.removePrefix=((e,t)=>e.startsWith(t)?e.slice(t.length):e),kotu.outputAccent=((e,t)=>{let a="",n=0,r=0;for(;r<e.length;){n++;let l=!1;for(t>0&&n===t&&(t>2&&(a+="</marking>"),a+="<marking class='drop'>"),"｀"===e.charAt(r)&&(l=!0,++r+1<e.length&&kotu.smallKana.includes(e.charAt(r+1))?a+="<silenced class='wide'>":a+="<silenced>"),a+=e.charAt(r),r++;r<e.length&&(kotu.smallKatakana.includes(e.charAt(r))||kotu.smallHiragana.includes(e.charAt(r)));)a+=e.charAt(r),r++;l&&(a+="</silenced>"),t>0&&n===t&&(a+="</marking>"),0===t&&1==n&&r<=e.length?a+="<marking class='overline'>":t>2&&1===n&&(a+="<marking class='overline'>"),0===t&&r===e.length&&(a+="</marking>")}return a}),kotu.outputAccentPlainText=((e,t)=>{let a="",n=0,r=0;for(;r<e.length;){for(a+=e.charAt(r),r++,n++;r<e.length&&kotu.smallKana.includes(e.charAt(r));)a+=e.charAt(r),r++;n===t&&(a+="＼")}return a}),kotu.parseSentences=(async e=>{const t=await fetch("https://kotu.io/api/dictionary/parse",{method:"POST",body:e});return await t.json()}),kotu.generateManualPitch=(async e=>{return(await kotu.parseSentences(e)).flatMap(e=>e.accentPhrases).map(e=>{const t=e.pronunciation,a=e.pitchAccent.mora;return kotu.outputAccentPlainText(t,a)}).join("・").replaceAll("　・","　").replaceAll("・　","　").replaceAll("、・","、").replaceAll("・、","、").replaceAll("・。","。").replaceAll("。・","。").replaceAll("・？","？").replaceAll("？・","？")}),kotu.generateVisualSentenceElement=(async(e,t,a)=>{let n=await kotu.parseSentences(t);if(!a||!a())return await kotu.generateVisualSentenceElementFromSentences(n,e,{},a)}),kotu.generateVisualSentenceElementFromSentences=(async(e,t,a,n)=>{const r=document.createElement("div");if(r.innerHTML=t,!e||0===e.length)return r;let l=(e=e.map(e=>e.accentPhrases)).shift()||[],s=(a.subtitles||[]).sort((e,t)=>e.startTime-t.startTime);s.forEach(e=>{e.cleanText=e.text.replace(/[\s「」\.,]/g,"")});let c=(s=s.filter(e=>e.cleanText.length>0)).shift(),i="";const o=document.createTreeWalker(r,NodeFilter.SHOW_TEXT);let u=0,p=0,f=0,d=!1;do{d=!1;let t=o.currentNode;if(t.nodeType!==Node.TEXT_NODE)continue;const a=t.textContent;let n="",r=0,h=l[u],m=a.indexOf(h.surface.charAt(0),r);for(;-1!=m;){const t=!1,o=h.surface.replace(/[\s「」\.,]/g,"");if(!c||(i.replace(/\s/g,"").length>0||h.surface.replace(/\s/g,"").length>0)&&c&&(r>0||0!==h.surface.trim().length)){if(c&&0===i.length){if(0===o.length)t=!0;else if(!c.cleanText.startsWith(o))if(l.slice(u).some(e=>c.cleanText.startsWith(e.surface.replace(/\s/g,""))))t=!0;else if(s.slice(0,5).some(e=>e.cleanText.startsWith(h.surface)))for(;c&&!c.cleanText.startsWith(h.surface);)c=s.shift();else t=!0;!t&&c&&(n+=`<cue data-index='${c.id}' data-subtitle-index='${f}' data-url='/api/media/external/audio/${c.externalFile.id}'><i class="bi bi-play-circle"></i></cue>`)}h.isBasic?n+=`<phrase ${!t&&c?`data-subtitle-index='${f}'`:""} data-phrase-index='${p}'><visual>${h.pronunciation}</visual><component data-component-index='0'>${h.surface}</component></phrase>`:n+=`<phrase ${!t&&c?`data-subtitle-index='${f}'`:""} data-phrase-index='${p}'><visual>${kotu.outputAccent(h.pronunciation,h.pitchAccent.mora)}</visual>${h.components.map((e,t)=>`<component data-component-index='${t}' data-original='${e.original}' data-surface='${e.surface}' data-frequency-surface='${e.frequencySurface||""}' class='underline underline-pitch-${e.pitchAccents[0].descriptive} underline-${e.frequency} status-${e.status}'>${e.ruby}</component>`).join("")}</phrase>`,!t&&c&&(i+=o).replace(/\s/g,"")===c.cleanText&&(c=s.shift(),i="",f+=1)}p+=1,(u+=1)>=l.length&&(l=e.shift()||[],u=0),(h=l[u])?(m=a.indexOf(h.surface.charAt(0),r),r+=h.surface.length):m=-1}if(n.length>0){const e=document.createElement("span");e.innerHTML=n,t.before(e),o.nextNode(),t.remove(),d=!0}}while((d||o.nextNode())&&(0!==e.length||u<l.length));return r.innerHTML}),kotu.generateManualPitchElement=(e=>{const t=/([^・\u25ef\u301c\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f]*)([／｀　 ＼\u25ef\u301c\u3040-\u309f\u30a0-\u30fa\u30fc-\u30ff\uff00-\uff9f]+)([^・\u25ef\u301c\u3040-\u309f\u30a0-\u30ff\uff00-\uff9f]*)/gm;let a,n="";for(;null!==(a=t.exec(e));){a.index===t.lastIndex&&t.lastIndex++;const e=a[1],r=a[2],l=a[3];let s=r.split("／");for(let[e,t]of s.entries())if(e>0){const t=s[e-1];if(0==t.length)continue;const a=t[t.length-1];s[e-1]=t.slice(0,-1),s[e]=`${a}${s[e]}`}let c=[];for(let e of s){let t=e.split("＼");if((t=t.filter((e,a)=>a===t.length-1||e.length>0)).length<=2)c.push({word:e,isTerraced:!1});else{for(;t.length>2;){let e=t.pop(),a=t.pop().split("");e=a.pop()+"＼"+e,t.push(a.join("")),c.unshift({word:e,isTerraced:!0})}c.unshift({word:t.join("＼"),isTerraced:!1})}}n+=`${e}<phrase><visual>${(s=c.filter(e=>e.word.length>0)).map(e=>{let t=kotu.removeYouon(e.word).replaceAll("｀","").indexOf("＼");t<0&&(t=0);const a=e.word.split("＼").join("");return kotu.outputAccent(a,t)}).join("")}</visual></phrase>${l}`}return`<span class='visual-type-showPitchAccentDrops'>${n=n.replace(/<\/phrase><phrase/g,"</phrase><space></space><phrase")}</span>`}),kotu.replacePlugin=(async(e,t)=>{const a=new RegExp(`\\[${e}:(?:\\s*)(.*(\\[(.*?)\\])*)\\]`,"mi");let n;const r=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);do{let e=r.currentNode;if(e.nodeType!==Node.TEXT_NODE)continue;let l=e.textContent,s=!1;for(;null!==(n=a.exec(l));){const e=n[1],a=await t(e);l=l.substring(0,n.index)+a+l.substring(n.index+n[0].length),s=!0}if(s){const t=kotu.parseHTML(l);e.before(...t),r.previousNode(),e.remove()}}while(r.nextNode())})),async function(){await kotu.replacePlugin("pitch",async e=>{const t=`<span class='visual-type-showPitchAccent'><span>${e}</span></span>`;return await kotu.generateVisualSentenceElement(t,kotu.textFromHTML(e))}),await kotu.replacePlugin("vpitch",async e=>{const t=await kotu.generateManualPitch(e);return await kotu.generateManualPitchElement(t)}),await kotu.replacePlugin("mpitch",async e=>await kotu.generateManualPitchElement(e)),await kotu.replacePlugin("frequency",async e=>{const t=`<span class='visual-type-showFrequency'><span>${e}</span></span>`;return await kotu.generateVisualSentenceElement(t,kotu.textFromHTML(e))}),await kotu.replacePlugin("audio",async e=>{e=e.trim();const t={autoPlay:{name:"auto",enabled:!1}};let a=!0;for(;a;){a=!1;for(let n in t){const r=t[n];e.startsWith(r.name+" ")&&(e=kotu.removePrefix(e,r.name+" ").trim(),r.enabled=!0,a=!0)}}return`<audio controls${t.autoPlay.enabled?" autoplay":""} src="https://kotu.io/api/media/audio/${e}"></audio>`})}();
+</script>
+<!-- KOTU_END_OF_BLOCK -->
