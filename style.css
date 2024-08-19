@@ -1,38 +1,38 @@
 /****** colors ******/
 :root {
-	--red: #fd5c5c;
-	--blue: #89daff;
-	--orange: #fca311;
-	--green: #4e937a;
-	--purple: #afa2ff;
+  --red: #fd5c5c;
+  --blue: #89daff;
+  --orange: #fca311;
+  --green: #4e937a;
+  --purple: #afa2ff;
 
-	--background:  #121511;
+  --background: #121511;
 
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	quotes: "\201c""\201d""\2018""\2019";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  quotes: "\201c""\201d""\2018""\2019";
 }
 
 /****** card css ******/
 :root {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 /** background color */
 
 span[style*="background-color: rgb(19, 19, 19)"] {
-    padding: 3px 5px;
-		margin: 0px 2px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-		outline: #222 solid;
+  padding: 3px 5px;
+  margin: 0px 2px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  outline: #222 solid;
 }
 
 #mainDiv {
   height: 100%;
   background-color: transparent;
   border-radius: 10px;
-	//outline: #222 solid;
+  //outline: #222 solid;
 }
 
 #kanjiHover {
@@ -42,234 +42,241 @@ span[style*="background-color: rgb(19, 19, 19)"] {
   align-items: center;
 }
 
-.win, .mac, .linux:not(.android) {
-	max-width: 1200px;
-	text-align: center;
-	margin: auto;
+.win,
+.mac,
+.linux:not(.android) {
+  max-width: 1200px;
+  text-align: center;
+  margin: auto;
 }
 
-body, body.nightMode {
- 	font-family:　Noto Sans JP, 	Hiragino Sans;;
-	font-size: 14px;
- 	text-align: center;
- 	color: white;
-	background: var(--background);
+body,
+body.nightMode {
+  font-family: Noto Sans JP, Hiragino Sans;
+  ;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+  background: var(--background);
 }
 
 
 img {
- 	width: auto;
-	height: auto;
- 	max-width: min(960px, 100%);
- 	max-height: 350px;
-	//border-radius: 10px;
-	box-shadow: 0px 0px 15px -5px rgba(0,0,0,1);
-	margin-bottom: 1rem;
+  width: auto;
+  height: auto;
+  max-width: min(960px, 100%);
+  max-height: 350px;
+  //border-radius: 10px;
+  box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 1);
+  margin-bottom: 1rem;
 }
 
 a {
-  	color: inherit !important;
+  color: inherit !important;
 }
 
 /* yomichan exports a lot of things as lists (pitch, dictionaries, freq lists), so this strips the formmating so it looks reasonable */
-ul, ol {
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-	display: inline;
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: inline;
 }
 
 li {
-	text-align: center;
-	margin: 0rem;
-	padding: 0.2rem;
+  text-align: center;
+  margin: 0rem;
+  padding: 0.2rem;
   //background-color: #2727270;
-	//outline: #222 solid;
-	border-radius: 8px;
-	box-shadow: 0px 0px 5px 0px rgba(19,19,19,1);
+  //outline: #222 solid;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px rgba(19, 19, 19, 1);
 }
 
 ul li {
-	padding: 5px 10px;
-	text-align: center;
-	background-color: #2727270;
-	border-radius: 6px;
-	box-shadow: 0px 0px 10px 0px rgba(19,19,19,1);
+  padding: 5px 10px;
+  text-align: center;
+  background-color: #2727270;
+  border-radius: 6px;
+  box-shadow: 0px 0px 10px 0px rgba(19, 19, 19, 1);
 }
 
 /* changes the furigana pitch graphs to be red and spaced a bit nicer */
 #word span {
-	border-color: var(--red) !important;
-	padding-top: 5px;
+  border-color: var(--red) !important;
+  padding-top: 5px;
 }
 
 /* if there's more than one item in the reading field, only show the first one */
-#word li:not(:first-child){
-	display: none;
+#word li:not(:first-child) {
+  display: none;
 }
 
 #onlyWrd {
-	display: flex;
-	flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 #reading {
-	font-size: 1.5rem;
-	padding: 0rem 0.4rem 0rem 0.4rem;
-	position: relative;
-	top: 5px;
-	//outline: #222 solid;
-	background-color: #181819;
-	border-radius: 6px;
-	margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+  padding: 0rem 0.4rem 0rem 0.4rem;
+  position: relative;
+  top: 5px;
+  //outline: #222 solid;
+  background-color: #181819;
+  border-radius: 6px;
+  margin-bottom: 0.2rem;
 }
 
 #word {
-	font-size: 3rem;
-	margin-bottom: 1rem;
- 	display: flex;
-	flex-direction: column;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-width: auto;
-	padding: 0.4rem 0.4rem 0rem 0.4rem;
-	outline: #222 solid;
+  padding: 0.4rem 0.4rem 0rem 0.4rem;
+  outline: #222 solid;
   background-color: #131313;
   border-radius: 10px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 #sentence {
-	display: block;
-	text-align: center;
- 	font-size: 2.1rem;
-	margin-bottom: 1rem;
+  display: block;
+  text-align: center;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
   background-color: #161616;
-	outline: #222 solid;
+  outline: #222 solid;
   border-radius: 10px;
   padding: 0.5rem 0.1rem 0.34rem 1.3rem;
-	box-shadow: 0px 0px 5px 0px rgba(19,19,19,1);
+  box-shadow: 0px 0px 5px 0px rgba(19, 19, 19, 1);
 }
 
 #definition {
-	padding: 0.6rem 0.2rem;
-	margin-bottom: 0.5rem;
-	font-size: 1.7rem;
-	display: grid;
-	place-items: center;
-	text-align: center;
-	background-color: #131313;
-	outline: #222 solid;
+  padding: 0.6rem 0.2rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.7rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background-color: #131313;
+  outline: #222 solid;
   border-radius: 10px;
-	box-shadow: 0px 0px 5px 0px rgba(19,19,19,1);
+  box-shadow: 0px 0px 5px 0px rgba(19, 19, 19, 1);
 }
 
 /* the highlighted word in the sentence */
-.highlight, .nightMode .highlight {
-	color: var(--red);
-	background-color: #171717;
-	padding: 3px;
-	padding-top: 8px;
-	padding-bottom: 4px;
-	margin: 0 3px;
-	border-radius: 5px;
+.highlight,
+.nightMode .highlight {
+  color: var(--red);
+  background-color: #171717;
+  padding: 3px;
+  padding-top: 8px;
+  padding-bottom: 4px;
+  margin: 0 3px;
+  border-radius: 5px;
 }
 
 .audio {
-	position: absolute;
-	background-color: rgb(51, 51, 51, 0.3);
-	border-radius: 6px;
-	box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.75);
+  position: absolute;
+  background-color: rgb(51, 51, 51, 0.3);
+  border-radius: 6px;
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 .sentenceAudio {
-	margin-left: 50px;
+  margin-left: 50px;
 }
 
 #centeredAudio {
-	display: grid;
-	place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 #centeredAudio .audio {
-	position: static;
+  position: static;
 }
 
 .audio circle {
-	display: none;
+  display: none;
 }
 
 .playImage path {
-	fill: rgb(0, 0, 0, 1) !important;
-	stroke: black!important;
+  fill: rgb(0, 0, 0, 1) !important;
+  stroke: black !important;
 }
 
 /* changes the cursor to look like a hand when you hover a kanji with kanjihover enabled */
 .kanjiHoverTarget {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 #freq {
-	font-size: 0.8rem;
+  font-size: 0.8rem;
   margin: 8px;
-	margin-top: 1rem;
-	left: 0px;
-	right: 0px;
- 	display: none;
-	border: 1px solid white;
-	border-radius: 5px;
-	padding: 4px;
+  margin-top: 1rem;
+  left: 0px;
+  right: 0px;
+  display: none;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 4px;
 }
 
 /****** pitch graphs ******/
 #pitchGraph {
-	font-size: 0; /* we want to hide "no pitch accent data found" etc */
-	color: var(--background);
-	margin-top: 1rem;
+  font-size: 0;
+  /* we want to hide "no pitch accent data found" etc */
+  color: var(--background);
+  margin-top: 1rem;
 }
 
-#pitchGraph svg{
-	font-size: 1rem;
+#pitchGraph svg {
+  font-size: 1rem;
 }
 
 circle {
-	fill:#fff !important;
-	stroke:#fff !important;
-	stroke-width:5 !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+  stroke-width: 5 !important;
 }
 
 path {
-	fill:none !important;
-	stroke:#fff !important;
-	stroke-width:5 !important;
+  fill: none !important;
+  stroke: #fff !important;
+  stroke-width: 5 !important;
 }
 
 #pitchGraph li:nth-child(n+3) {
-	display: none;
+  display: none;
 }
 
 /****** mobile styling ******/
 .mobile .card img {
- 	max-width: 100%;
-	max-height: none;
+  max-width: 100%;
+  max-height: none;
 }
 
 .mobile .card {
- 	margin: 0.5em 0em;
-	border-radius: 0px;
+  margin: 0.5em 0em;
+  border-radius: 0px;
 }
 
 .mobile #content {
- 	margin: 0.5em 0em;
-	border-radius: 0px;
+  margin: 0.5em 0em;
+  border-radius: 0px;
 }
 
 .mobile #word {
-	font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
 .mobile #sentence {
-	min-width: 95%;
+  min-width: 95%;
   border-radius: 0px;
 }
 
@@ -305,7 +312,7 @@ Option 1 is enabled by default, while options 2 and 3 are commented out. To use 
 }
 
 .mobile .NSFW .audio {
-	position: static;
+  position: static;
 }
 
 
