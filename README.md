@@ -6,8 +6,7 @@
 
 
 ## CSS Appearence.
-
-![chrome_If3V2WcW6d](https://github.com/aramrw/yomichan-dict-css/assets/106574385/c6b6ceb1-a2e3-4102-893c-437f68252c4c)
+![chrome_5z4UJtFSUF](https://github.com/user-attachments/assets/5ea1ab5f-a62b-4af9-b5ce-5770ddb5ae5b)
 
 ## Anki Note Appearence.
 ![anki_CFUVj4Sg4y](https://github.com/user-attachments/assets/e3c5cad0-dd9d-4039-9241-0ab1fdce6236)
