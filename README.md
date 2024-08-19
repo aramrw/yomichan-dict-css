@@ -3,11 +3,13 @@
 
 **[Download Dictionaries](https://drive.google.com/file/d/19hLNyoolPaA3JlTw_cTbXHV6Irogd-Bf/view?usp=drive_link)** |
 [Settings](https://drive.google.com/file/d/19hLNyoolPaA3JlTw_cTbXHV6Irogd-Bf/view?usp=drive_link)
+
 ## Anki
 <img src="https://github.com/user-attachments/assets/e3c5cad0-dd9d-4039-9241-0ab1fdce6236" width="500px" />
 
+**[Download Anki Template (.apkg)](https://github.com/aramrw/yomichan-dict-css/releases/download/1.1.0/anki-note.apkg)**
+
 ### Anki Plugins
-[Download Card Template](https://github.com/aramrw/yomichan-dict-css/releases/download/1.1.0/anki-note.apkg)
 **[Anki Connect](https://ankiweb.net/shared/info/2055492159)** |
 **[AJT Japanese](https://ankiweb.net/shared/info/1344485230)** |
 **[Review Heatmap](https://ankiweb.net/shared/info/1771074083)** |
