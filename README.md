@@ -4,7 +4,7 @@
 
 **[Download Dictionaries](https://github.com/aramrw/yomichan-dict-css/releases/download/1.2.0/yomitan-dicts.zip)** |
 [Settings] |
-[Standalone Yomichan Audio Server (No Anki)](https://github.com/aramrw/yomichan_audio_server)
+[Standalone Yomichan Audio Server (No Anki Needed)](https://github.com/aramrw/yomichan_audio_server)
 
 ## Anki
 <img src="https://github.com/user-attachments/assets/e3c5cad0-dd9d-4039-9241-0ab1fdce6236" width="500px" />
