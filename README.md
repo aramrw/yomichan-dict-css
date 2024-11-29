@@ -19,6 +19,7 @@
 **[Review Heatmap](https://ankiweb.net/shared/info/1771074083)** |
 **[Quick Color Changing](https://ankiweb.net/shared/info/2491935955)** |
 **[Kotu Utilities](https://ankiweb.net/shared/info/1565434616)** |
+
 [Pass/Fail](https://ankiweb.net/shared/info/876946123) |
 [Anki Redesign](https://ankiweb.net/shared/info/1959668791) |
 [Quick Restart](https://ankiweb.net/shared/info/237169833) |
