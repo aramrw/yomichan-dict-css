@@ -2,7 +2,7 @@
 > 酩酊 | 阿鼻叫喚
 <img src="https://github.com/user-attachments/assets/5ea1ab5f-a62b-4af9-b5ce-5770ddb5ae5b" width="500px" />
 
-**[Download Dictionaries](https://github.com/aramrw/yomichan-dict-css/releases/download/1.3.0/yomitan-dicts.zip)** |
+**[Download Dictionaries](https://github.com/aramrw/yomichan-dict-css/releases/download/v1.3.0/yomitan-dicts.zip)** |
 [Settings] |
 [Standalone Yomichan Audio Server (No Anki Needed)](https://github.com/aramrw/yomichan_audio_server)
 
