@@ -23,5 +23,5 @@
 [Pass/Fail](https://ankiweb.net/shared/info/876946123) |
 [Anki Redesign](https://ankiweb.net/shared/info/1959668791) |
 [Quick Restart](https://ankiweb.net/shared/info/237169833) |
-[WebView Inspecter](https://ankiweb.net/shared/info/31746032) |
+[WebView Inspecter](https://ankiweb.net/shared/info/31746032)
 
